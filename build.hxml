@@ -1,0 +1,7 @@
+-cp src
+-lib grig.controller
+-lib grig.osc
+
+-main Main
+
+-cpp bin/DummyDAW

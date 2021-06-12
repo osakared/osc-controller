@@ -1,4 +1,10 @@
-## IDs are GUIDs
+# osc-controller
+
+Will be based on grig.controller but also have a dummy server for testing
+
+
+
+IDs are GUIDs
 
 Per each connection:
 
@@ -36,3 +42,12 @@ Sent from remote controller to change state:
 | ---------------------------- | ------- | ------------- |
 | /tracks/add                  |         |               |
 | /scenes/add                  |         |               |
+
+### Registering listeners:
+
+The controller has to know which servers to send updates to. Register with a two-part message. This probably needs to be more fine-tuned to keep traffic down.
+
+| address                      | value                 | range         |
+| ---------------------------- | --------------------- | ------------- |
+| /listen/track/[ID]           | string, integer       | host, port    |
+| ..etc                        |                       |               |
